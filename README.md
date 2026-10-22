@@ -3,10 +3,14 @@
 这是原 Python 项目的独立 Java 17 移植版，保留了请求参数、WebSocket 心跳、ACK 和
 protobuf 消息结构。Java 版本不依赖 Python、Node.js 或原项目文件。
 
+> [!IMPORTANT]
+> 本项目仅用于个人学习、技术研究和合法的数据处理。使用者应自行确保其使用行为符合
+> 当地法律法规、目标平台服务条款及隐私规则，并对数据的获取、存储、使用和传播承担
+> 全部责任。详细条款见 [DISCLAIMER.md](DISCLAIMER.md)。
+
 ## 环境
 
 - JDK 17+
-- Maven 3.8+
 - Maven 3.8+
 
 WebSocket `signature` 和 HTTP `a_bogus` 均由 Java 原生算法生成：
@@ -17,7 +21,7 @@ WebSocket `signature` 和 HTTP `a_bogus` 均由 Java 原生算法生成：
 ## 构建
 
 ```bash
-cd /Users/mjc/PycharmProjects/DouyinLiveWebFetcher-java
+cd DouyinLiveWebFetcher-java
 mvn package
 ```
 
@@ -79,5 +83,15 @@ try (var fetcher = new DouyinLiveWebFetcher(
 - 排行榜
 - 流配置适配
 
-本项目仅用于学习和技术研究，请遵守目标平台的服务条款。原生签名算法的参考来源和
-许可证见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+## 法律与责任声明
+
+- 本项目与抖音、字节跳动及其关联公司不存在隶属、授权、合作或背书关系。
+- 使用者不得利用本项目绕过访问控制、侵犯个人信息或隐私、实施攻击、骚扰、欺诈，
+  或以其他违反法律法规和平台规则的方式获取、使用、出售或传播数据。
+- 项目按“现状”提供，不保证功能持续可用、数据准确或符合特定用途。因使用或无法使用
+  本项目产生的账号限制、平台处罚、数据损失或第三方索赔，由使用者自行承担。
+- 本声明不构成法律意见，也不能排除适用法律明确禁止排除的责任。完整免责声明见
+  [DISCLAIMER.md](DISCLAIMER.md)。
+
+原生签名算法的参考来源和许可证见
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
